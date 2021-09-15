@@ -1,39 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { GiTomato } from "react-icons/gi";
 import { IconContext } from "react-icons/lib";
 import { MenuData } from "./MenuData";
 import "../css/Navbar.css";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
   return (
     <>
-      <IconContext.Provider value={{ color: "#FFFFFF" }}>
+      <IconContext.Provider value={{ color: "#F00909" }}>
         <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <GiTomato className="nav-icon" />
+              <img src={logo} className="navbar-icon" alt="logo" />
               Diji-DOM
             </Link>
             <div className="menu-icon" onClick={handleClick}>
