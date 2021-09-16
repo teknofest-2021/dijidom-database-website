@@ -1,12 +1,12 @@
-export function tableSearch(index) {
-  console.log(index)
+export function tableSearch() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("input");
   filter = input.value.toUpperCase();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[index];
+
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {

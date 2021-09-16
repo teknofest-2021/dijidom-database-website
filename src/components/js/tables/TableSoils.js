@@ -9,7 +9,7 @@ export default function TableSoils({ data }) {
         id="input"
         type="text"
         className="search"
-        onKeyUp={() => tableSearch(0)}
+        onKeyUp={tableSearch}
         placeholder="Ara.."
       ></input>
       <table id="table" className="table">

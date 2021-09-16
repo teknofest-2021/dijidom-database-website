@@ -9,8 +9,8 @@ export default function TablePlants({ data }) {
         id="input"
         type="text"
         className="search"
-        onKeyUp={() => tableSearch(0)}
-        placeholder="Ada Göre Ara.."
+        onKeyUp={tableSearch}
+        placeholder="Ara.."
       ></input>
       <table id="table" className="table">
         <thead>
