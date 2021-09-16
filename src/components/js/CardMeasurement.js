@@ -22,7 +22,7 @@ export default function Card({ data }) {
       <div className="card-right">
         <div className="card-right-block">
           <div className="card-icon">
-            <RiPlantFill size={55} />
+            <RiPlantFill size={50} />
             <h3>Bitki</h3>
           </div>
           <div className="card-right-block-column-line" />
@@ -46,7 +46,7 @@ export default function Card({ data }) {
 
         <div className="card-right-block">
           <div className="card-icon">
-            <IoCloudy size={55} />
+            <IoCloudy size={50} />
             <h3>Ortam</h3>
           </div>
           <div className="card-right-block-column-line" />
@@ -70,7 +70,7 @@ export default function Card({ data }) {
 
         <div className="card-right-block">
           <div className="card-icon">
-            <ImEarth size={55} />
+            <ImEarth size={50} />
             <h3>Toprak</h3>
           </div>
           <div className="card-right-block-column-line" />
