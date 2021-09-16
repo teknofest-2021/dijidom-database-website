@@ -10,10 +10,6 @@ export const MenuData = [
     // icon: <RiPlantFill.RiPlantFill />,
   },
   {
-    title: "Bitki Türleri",
-    path: "/plantTypes",
-  },
-  {
     title: "Ortamlar",
     path: "/ambients",
   },

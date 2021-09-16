@@ -1,13 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { GetAmbients } from "../../../api/Requests";
+import TableAmbients from "../../js/tables/TableAmbients.js";
+import "../css/Style.css";
 
 function Ambients() {
+  const [datas, setDatas] = useState([]);
   useEffect(() => {
-    GetAmbients().then((data) => console.log(data));
-  });
+    GetAmbients().then((response) => {
+      setDatas(response)
+    });
+  }, []);
   return (
-    <div>
+    <div className="style-container container">
       <h1>Ortamlar</h1>
+      {datas && <TableAmbients data={datas} />}
     </div>
   );
 }
