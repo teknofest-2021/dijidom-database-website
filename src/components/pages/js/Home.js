@@ -13,8 +13,11 @@ function Home() {
     GetLastMeasurement().then((response) => {
       setDatas(response);
     });
-    //GetAllMeasurementByPlantID(1).then((data) => console.log(data));
   }, []);
+
+  const getData = (id) => {
+    GetAllMeasurementByPlantID(id).then((data) => console.log(data));
+  };
 
   return (
     <div className="style-container container">
@@ -22,7 +25,7 @@ function Home() {
       {datas &&
         datas.map((m) => {
           return (
-            <div onClick={() => alert(m.plantID)}>
+            <div key={m.plantID} onClick={() => getData(m.plantID)}>
               <CardMeasurement data={m} />
             </div>
           );

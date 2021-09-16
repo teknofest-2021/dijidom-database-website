@@ -1,23 +1,30 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .style-container {
-    margin-top: 3%;
+  margin-top: 3%;
 }
 
 .btn {
-    margin-top: 15px;
-    background-color: #e60031;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    border-radius: 5px;
-    color: #FFF;
+  margin-top: 15px;
+  background-color: #e60031;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0px 0px 7px 1px #55555599;
 }
 
 .btn:hover {
-    box-shadow: 0px 0px 7px 1px #55555599;
+  box-shadow: 0px 2px 7px 1px #55555599;
+}
+
+.btn:active {
+  background-color: #e60000;
+  box-shadow: 0px 2px 7px 1px #55555599;
+  transform: translateY(1px);
 }

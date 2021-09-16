@@ -18,7 +18,7 @@ export default function TableAmbients({ data }) {
             {/* <th>Ortam ID</th> */}
             <th>Hava Kalitesi</th>
             <th>Hava Sıcaklığı (°)</th>
-            <th>Hava Nemi (g/m3)</th>
+            <th>Hava Nemi (g/m^3)</th>
             <th>Ölçüm Tarihi</th>
           </tr>
         </thead>

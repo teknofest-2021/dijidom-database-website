@@ -6,10 +6,7 @@ import "../css/CardMeasurement.css";
 
 export default function Card({ data }) {
   return (
-    <div
-      className="card"
-      key={data.plantID}
-    >
+    <div className="card" key={data.plantID}>
       <div className="card-left">
         <img
           className="image"
@@ -28,15 +25,15 @@ export default function Card({ data }) {
           <div className="card-right-block-column-line" />
           <div className="card-right-block-rows">
             <div className="card-right-block-row">
-              <h3>Adı: </h3>
+              <h3>Adı </h3>
               <p>{data.plantName}</p>
             </div>
             <div className="card-right-block-row">
-              <h3>Türü: </h3>
+              <h3>Türü </h3>
               <p>{data.typeName}</p>
             </div>
             <div className="card-right-block-row">
-              <h3>Boyu: </h3>
+              <h3>Boyu </h3>
               <p>{data.plantHeight} cm</p>
             </div>
           </div>
@@ -52,16 +49,16 @@ export default function Card({ data }) {
           <div className="card-right-block-column-line" />
           <div className="card-right-block-rows">
             <div className="card-right-block-row">
-              <h3>Kalitesi: </h3>
+              <h3>Kalitesi </h3>
               <p>{data.airQuality}</p>
             </div>
             <div className="card-right-block-row">
-              <h3>Sıcaklığı: </h3>
+              <h3>Sıcaklığı </h3>
               <p>{data.airTemperature}°</p>
             </div>
             <div className="card-right-block-row">
-              <h3>Nemi: </h3>
-              <p>{data.airHumidity} g/m3</p>
+              <h3>Nemi </h3>
+              <p>{data.airHumidity} g/m^3</p>
             </div>
           </div>
         </div>
@@ -76,11 +73,11 @@ export default function Card({ data }) {
           <div className="card-right-block-column-line" />
           <div className="card-right-block-rows">
             <div className="card-right-block-row">
-              <h3>Sıcaklığı: </h3>
+              <h3>Sıcaklığı </h3>
               <p>{data.soilTemperature}°</p>
             </div>
             <div className="card-right-block-row">
-              <h3>Nemi: </h3>
+              <h3>Nemi </h3>
               <p>{data.soilHumidity} g/m3</p>
             </div>
           </div>
