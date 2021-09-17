@@ -87,7 +87,7 @@ export default function Card({ data }) {
 
         <div className="card-right-block">
           <div className="card-right-block-date">
-            <h3>{data.createdDate}</h3>
+            <h3>{data.measurementDate.slice(0, 19).replace('T', ' ')}</h3>
           </div>
         </div>
       </div>

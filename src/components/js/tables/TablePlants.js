@@ -15,20 +15,20 @@ export default function TablePlants({ data }) {
       <table id="table" className="table">
         <thead>
           <tr>
-            {/* <th>Bitki ID</th> */}
+            <th>Bitki ID</th>
             <th>Adı</th>
             <th>Tür Adı</th>
-            <th>Uzunluğu (cm)</th>
+            <th>Ekilme Tarihi</th>
           </tr>
         </thead>
         <tbody>
           {data.map((m) => {
             return (
               <tr key={m.plantID}>
-                {/* <td>{m.plantID}</td> */}
+                <td>{m.plantID}</td>
                 <td>{m.plantName}</td>
                 <td>{m.typeName}</td>
-                <td>{m.plantHeight}</td>
+                <td>{m.sowingDate.slice(0, 19).replace('T', ' ')}</td>
               </tr>
             );
           })}

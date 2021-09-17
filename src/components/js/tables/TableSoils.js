@@ -15,7 +15,9 @@ export default function TableSoils({ data }) {
       <table id="table" className="table">
         <thead>
           <tr>
-            {/* <th>Toprak ID</th> */}
+            <th>Bitki ID</th>
+            <th>Bitki Adı</th>
+            <th>Toprak ID</th>
             <th>Sıcaklığı (°)</th>
             <th>Nemi (g/m^3)</th>
             <th>Ölçüm Tarihi</th>
@@ -25,10 +27,12 @@ export default function TableSoils({ data }) {
           {data.map((m) => {
             return (
               <tr key={m.soilID}>
-                {/* <td>{m.soilID}</td> */}
+                <td>{m.plantID}</td>
+                <td>{m.plantName}</td>
+                <td>{m.soilID}</td>
                 <td>{m.soilTemperature}</td>
                 <td>{m.soilHumidity}</td>
-                <td>{m.createdDate}</td>
+                <td>{m.measurementDate.slice(0, 19).replace('T', ' ')}</td>
               </tr>
             );
           })}

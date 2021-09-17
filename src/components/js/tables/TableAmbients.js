@@ -30,7 +30,7 @@ export default function TableAmbients({ data }) {
                 <td>{m.airQuality}</td>
                 <td>{m.airTemperature}</td>
                 <td>{m.airHumidity}</td>
-                <td>{m.createdDate}</td>
+                <td>{m.measurementDate.slice(0, 19).replace('T', ' ')}</td>
               </tr>
             );
           })}
