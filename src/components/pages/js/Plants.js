@@ -1,32 +1,78 @@
 import React, { useEffect, useState } from "react";
 import { GetPlants, GetPlantTypes } from "../../../api/Requests";
-import TablePlants from "../../js/tables/TablePlants";
 import "../css/Style.css";
-import Modal from "../../js/ModalPlantTypes";
+import Table from "../../js/Table";
 
 function Plants() {
-  const [datas, setDatas] = useState([]);
-  const [datasType, setDatasType] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [plants, setPlants] = useState([]);
+  const [plantTypes, setPlantTypes] = useState([]);
+  const [plantsLoading, setPlantsLoading] = useState(true);
+  const [plantTypesLoading, setPlanTypesLoading] = useState(true);
 
   useEffect(() => {
-    GetPlants().then((data) => setDatas(data));
-    GetPlantTypes().then((data) => setDatasType(data));
+    GetPlants().then((data) => {
+      setPlants(data);
+      setPlantsLoading(false);
+    });
+
+    GetPlantTypes().then((data) => {
+      setPlantTypes(data);
+      setPlanTypesLoading(false);
+    });
   }, []);
+
+  const plantTypeColumns = [
+    {
+      title: "Tür Adı",
+      field: "typeName",
+      cellStyle: {
+        textAlign: "center",
+      },
+    },
+  ];
+
+  const plantColumns = [
+    {
+      title: "Bitki Adı",
+      field: "plantName",
+      cellStyle: {
+        textAlign: "center",
+      },
+    },
+    {
+      title: "Tür Adı",
+      field: "typeName",
+      cellStyle: {
+        textAlign: "center",
+      },
+    },
+    {
+      title: "Ekilme Tarihi",
+      field: "sowingDate",
+      type: "datetime",
+      cellStyle: {
+        textAlign: "center",
+      },
+      dateSetting: { locale: "tr-TR" },
+    },
+  ];
 
   return (
     <div className="style-container container">
-      <h1>Bitkiler</h1>
-      <div
-        className="btn"
-        onClick={() => {
-          setModalOpen(true);
-        }}
-      >
-        Bitki Türleri
-      </div>
-      {datas && <TablePlants data={datas} />}
-      {modalOpen && <Modal setOpenModal={setModalOpen} types={datasType} />}
+      <Table
+          title={"Bitki Türleri"}
+          columns={plantTypeColumns}
+          datas={plantTypes}
+          loading={plantTypesLoading}
+          pageSize={4}
+        />
+      <Table
+        title={"Bitkiler"}
+        columns={plantColumns}
+        datas={plants}
+        loading={plantsLoading}
+        pageSize={4}
+      />
     </div>
   );
 }

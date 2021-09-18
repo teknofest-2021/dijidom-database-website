@@ -7,25 +7,24 @@ import "../css/Style.css";
 import CardMeasurement from "../../js/CardMeasurement";
 
 function Home() {
-  const [datas, setDatas] = useState([]);
+  const [measurements, setMeasurements] = useState([]);
 
   useEffect(() => {
     GetLastMeasurement().then((response) => {
-      setDatas(response);
+      setMeasurements(response);
     });
   }, []);
 
-  const getData = (id) => {
-    GetAllMeasurementByPlantID(id).then((data) => console.log(data));
-  };
+  // const getData = (id) => {
+  //   GetAllMeasurementByPlantID(id).then((data) => console.log(data));
+  // };
 
   return (
     <div className="style-container container">
-      <h1>Ana Sayfa</h1>
-      {datas &&
-        datas.map((m) => {
+      {measurements &&
+        measurements.map((m) => {
           return (
-            <div key={m.plantID} onClick={() => getData(m.plantID)}>
+            <div key={m.plantID}>
               <CardMeasurement data={m} />
             </div>
           );

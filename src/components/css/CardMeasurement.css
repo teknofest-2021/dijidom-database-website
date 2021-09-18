@@ -109,7 +109,7 @@
   }
 
   .card:hover:hover {
-    box-shadow: 0px 0px 15px 3px #a1535399;
+    box-shadow: 0px 0px 10px 5px #55555599;
   }
 
   .card-left {
@@ -206,7 +206,7 @@
   }
 
   .card:hover:hover {
-    box-shadow: 0px 0px 15px 3px #a1535399;
+    box-shadow: 0px 0px 10px 5px #55555599;
   }
 
   .card-left {
