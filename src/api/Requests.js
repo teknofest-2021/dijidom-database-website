@@ -59,3 +59,28 @@ export async function GetAllMeasurementByPlantID(plantID) {
     .catch((error) => console.log("error", error));
   return result;
 }
+
+export async function GetAllMeasurementDateByPlantID(plantID, measurementDate) {
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    plantID: plantID,
+    measurementDate: measurementDate,
+  });
+
+  var postRequestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  const result = await fetch(
+    url + "/api/Measurements/GetAllMeasurementDateByIDQuery",
+    postRequestOptions
+  )
+    .then((response) => response.json())
+    .catch((error) => console.log("error", error));
+  return result;
+}
