@@ -22,7 +22,7 @@ function Soils() {
       },
     },
     {
-      title: "Toprak Sıcaklığı (°)",
+      title: "Toprak Sıcaklığı (°C)",
       field: "soilTemperature",
       type: "numeric",
       cellStyle: {
@@ -40,11 +40,9 @@ function Soils() {
     {
       title: "Ölçüm Tarihi",
       field: "measurementDate",
-      type: "datetime",
       cellStyle: {
         textAlign: "center",
       },
-      dateSetting: { locale: "tr-TR" },
     },
   ];
 

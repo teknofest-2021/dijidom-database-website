@@ -16,7 +16,7 @@ function Ambients() {
 
   const columns = [
     {
-      title: "Kalitesi",
+      title: "Hava Kalitesi (g/m^3)",
       field: "airQuality",
       type: "numeric",
       cellStyle: {
@@ -24,7 +24,7 @@ function Ambients() {
       },
     },
     {
-      title: "Sıcaklığı (°)",
+      title: "Hava Sıcaklığı (°C)",
       field: "airTemperature",
       type: "numeric",
       cellStyle: {
@@ -32,7 +32,7 @@ function Ambients() {
       },
     },
     {
-      title: "Nem Oranı (%)",
+      title: "Hava Nem Oranı (%)",
       field: "airHumidity",
       type: "numeric",
       cellStyle: {
@@ -42,11 +42,9 @@ function Ambients() {
     {
       title: "Ölçüm Tarihi",
       field: "measurementDate",
-      type: "datetime",
       cellStyle: {
         textAlign: "center",
       },
-      dateSetting: { locale: "tr-TR" },
     },
   ];
 

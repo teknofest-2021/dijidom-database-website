@@ -49,11 +49,9 @@ function Plants() {
     {
       title: "Ekilme Tarihi",
       field: "sowingDate",
-      type: "datetime",
       cellStyle: {
         textAlign: "center",
       },
-      dateSetting: { locale: "tr-TR" },
     },
   ];
 

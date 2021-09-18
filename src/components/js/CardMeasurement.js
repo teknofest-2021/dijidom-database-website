@@ -50,7 +50,7 @@ export default function Card({ data }) {
           <div className="card-right-block-rows">
             <div className="card-right-block-row">
               <h3>Kalitesi </h3>
-              <p>{data.airQuality}</p>
+              <p>{data.airQuality} g/m^3</p>
             </div>
             <div className="card-right-block-row">
               <h3>Sıcaklığı </h3>
@@ -58,7 +58,7 @@ export default function Card({ data }) {
             </div>
             <div className="card-right-block-row">
               <h3>Nemi </h3>
-              <p>{data.airHumidity} g/m^3</p>
+              <p>{data.airHumidity}%</p>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function Card({ data }) {
             </div>
             <div className="card-right-block-row">
               <h3>Nemi </h3>
-              <p>{data.soilHumidity} g/m3</p>
+              <p>{data.soilHumidity} %</p>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Card({ data }) {
 
         <div className="card-right-block">
           <div className="card-right-block-date">
-            <h3>{data.measurementDate.slice(0, 19).replace('T', ' ')}</h3>
+            <h3>{data.measurementDate}</h3>
           </div>
         </div>
       </div>

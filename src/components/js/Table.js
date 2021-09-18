@@ -46,7 +46,7 @@ export default function Table({
     <MaterialTable
       style={{
         borderRadius: "10px",
-        marginTop: "1%",
+        marginTop: "2%",
       }}
       icons={tableIcons}
       title={title}
@@ -76,8 +76,9 @@ export default function Table({
         },
         headerStyle: {
           textAlign: "center",
+          fontWeight: "bold",
         },
-        paginationType: "stepped"
+        paginationType: "stepped",
       }}
       isLoading={loading}
     />
