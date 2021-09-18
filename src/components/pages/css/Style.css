@@ -17,30 +17,12 @@
 }
 
 .items-container::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-.items-container::-webkit-scrollbar-track {
-  border: 1px solid #252525;
-  border-radius: 10px;
-}
-
-.items-container::-webkit-scrollbar-thumb {
-  background: #252525;
-  border-radius: 10px;
-}
-
-.items-container::-webkit-scrollbar-thumb:hover {
-  background: #f00909;
+  display: none;
 }
 
 @media screen and (max-width: 750px) {
   .container {
     margin: 0;
     padding: 3%;
-  }
-  .items-container::-webkit-scrollbar {
-    display: none;
   }
 }

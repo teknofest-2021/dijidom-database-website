@@ -8,24 +8,23 @@ import CardMeasurement from "../../js/CardMeasurement";
 import {
   ResponsiveContainer,
   LineChart,
-  Line,
   CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
   Legend,
+  Line,
 } from "recharts";
 
 function Home() {
   const [measurements, setMeasurements] = useState([]);
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
 
   useEffect(() => {
     GetLastMeasurement().then((response) => {
       setMeasurements(response);
     });
-    // GetAllMeasurementByPlantID(2).then((data) => {
-    //   setMeasurements(data);
-    // });
   }, []);
 
   return (
@@ -34,7 +33,7 @@ function Home() {
         {measurements &&
           measurements.map((m) => {
             return (
-              <div key={m.plantID}>
+              <div key={m.plantID} onClick={() => Toggle()}>
                 <CardMeasurement data={m} />
               </div>
             );

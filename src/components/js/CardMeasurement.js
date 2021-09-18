@@ -54,7 +54,7 @@ export default function Card({ data }) {
             </div>
             <div className="card-right-block-row">
               <h3>Sıcaklığı </h3>
-              <p>{data.airTemperature}°</p>
+              <p>{data.airTemperature}°C</p>
             </div>
             <div className="card-right-block-row">
               <h3>Nemi </h3>
@@ -74,7 +74,7 @@ export default function Card({ data }) {
           <div className="card-right-block-rows">
             <div className="card-right-block-row">
               <h3>Sıcaklığı </h3>
-              <p>{data.soilTemperature}°</p>
+              <p>{data.soilTemperature}°C</p>
             </div>
             <div className="card-right-block-row">
               <h3>Nemi </h3>
