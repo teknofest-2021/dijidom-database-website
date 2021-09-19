@@ -69,7 +69,7 @@ export default function GraphModal({ modal, toggle, id }) {
             <XAxis dataKey="measurementDate" fillOpacity={0} />
             <YAxis />
             <Tooltip />
-            <Legend />
+            <Legend verticalAlign="top" height={36} />
             <Line
               type="monotone"
               name="Hava Kalitesi"
