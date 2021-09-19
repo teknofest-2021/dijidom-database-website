@@ -2,7 +2,7 @@
 
 This is a website for Diji-DOM. You can follow the greenhouse instantly. You can review the most up-to-date ambient, soil and plant information.
 
-<img src="screenshots/mainpage.png">
+<img src="items/screenshots/mainpage.png">
 
 ## Getting Started
 
