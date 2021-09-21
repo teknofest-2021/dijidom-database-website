@@ -33,7 +33,6 @@ function Navbar() {
                       className="nav-links"
                       onClick={closeMobileMenu}
                     >
-                      {/* {item.icon} */}
                       <span>{item.title}</span>
                     </Link>
                   </li>

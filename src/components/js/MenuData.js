@@ -2,12 +2,10 @@ export const MenuData = [
   {
     title: "Ana Sayfa",
     path: "/",
-    // icon: <AiIcons.AiFillHome />,
   },
   {
     title: "Bitkiler",
     path: "/plants",
-    // icon: <RiPlantFill.RiPlantFill />,
   },
   {
     title: "Ortamlar",
@@ -16,5 +14,9 @@ export const MenuData = [
   {
     title: "Topraklar",
     path: "/soils",
+  },
+  {
+    title: "Mobil Uygulama",
+    path: "/orientation"
   },
 ];

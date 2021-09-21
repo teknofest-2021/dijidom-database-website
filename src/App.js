@@ -5,6 +5,7 @@ import Home from "./components/pages/js/Home";
 import Ambients from "./components/pages/js/Ambients";
 import Plants from "./components/pages/js/Plants";
 import Soils from "./components/pages/js/Soils";
+import Orientation from "./components/pages/js/Orientation";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path='/ambients' exact component={Ambients} />
       <Route path='/plants' exact component={Plants} />
       <Route path='/soils' exact component={Soils} />
+      <Route path='/orientation' exact component={Orientation} />
       </Switch>
     </Router>
   );

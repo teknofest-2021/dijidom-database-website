@@ -20,6 +20,11 @@
   display: none;
 }
 
+.btn {
+  background-color: "F00909";
+
+}
+
 @media screen and (max-width: 750px) {
   .container {
     margin: 0;
