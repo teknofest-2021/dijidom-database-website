@@ -17,4 +17,8 @@ export const MenuData = [
     title: "Topraklar",
     path: "/soils",
   },
+  {
+    title: "Mobil Uygulama",
+    path: "/orientation",
+  },
 ];
